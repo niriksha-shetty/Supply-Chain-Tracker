@@ -1,5 +1,15 @@
+# Build output directories
 **/target/
+
+# IDE configurations
+.idea/
 **/.idea/
+*.iml
 **/*.iml
+.vscode/
 **/.vscode/
+
+# System & log files
+.DS_Store
 **/.DS_Store
+*.log
