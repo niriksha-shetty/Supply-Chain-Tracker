@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.UUID;
 
-@FeignClient(name = "order-service", url = "http://localhost:8082/api/orders")
+@FeignClient(name = "order-service", path = "/api/orders")
 public interface OrderClient {
 
     @PatchMapping("/flag-facility/{facilityId}/{status}")
