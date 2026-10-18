@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.UUID;
 
 // Points directly to the Supplier Service running on port 8081
-@FeignClient(name = "supplier-service", path = "/api/suppliers")
+@FeignClient(name = "SUPPLIER-SERVICE", path = "/api/suppliers", fallbackFactory = SupplierClientFallbackFactory.class)
 public interface SupplierClient {
 
     @GetMapping("/{id}")
